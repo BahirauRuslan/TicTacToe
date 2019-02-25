@@ -131,5 +131,13 @@ namespace TicTacToe
                 button.Content = "";
             }
         }
+
+        private void DrawWinSeries(ISet<Point> winSeries)
+        {
+            foreach (Point point in winSeries)
+            {
+                buttonsPoints[point].Foreground = new SolidColorBrush(Colors.Red);
+            }
+        }
     }
 }
