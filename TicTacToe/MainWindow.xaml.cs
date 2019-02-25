@@ -39,6 +39,7 @@ namespace TicTacToe
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             ;
+            ClearAllPlayGroundButtons();
             SetToAllPlayGroundButtonsStatus(true);
             startButton.IsEnabled = false;
             replayButton.IsEnabled = true;
@@ -47,15 +48,12 @@ namespace TicTacToe
 
         private void ReplayButton_Click(object sender, RoutedEventArgs e)
         {
-            ;
-            ClearAllPlayGroundButtons();
             StartButton_Click(sender, null);
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
             ;
-            ClearAllPlayGroundButtons();
             SetToAllPlayGroundButtonsStatus(false);
             startButton.IsEnabled = true;
             replayButton.IsEnabled = false;
