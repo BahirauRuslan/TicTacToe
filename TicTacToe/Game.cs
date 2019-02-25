@@ -70,22 +70,72 @@ namespace TicTacToe
 
         private ISet<Point> GetVertical(IList<Point> points)
         {
-            throw new NotImplementedException();
+            int floor = (int)(lastPoint.Y - playGround.SeriesLength);
+            int ceil = (int)(lastPoint.Y + playGround.SeriesLength + 1);
+            ISet<Point> winSeries = new HashSet<Point>();
+
+            for (int j = floor; j < ceil; j++)
+            {
+                Point point = new Point(lastPoint.X, j);
+                if (points.Contains(point))
+                {
+                    winSeries.Add(point);
+                }
+            }
+
+            return winSeries;
         }
 
         private ISet<Point> GetHorizontal(IList<Point> points)
         {
-            throw new NotImplementedException();
+            int floor = (int)(lastPoint.X - playGround.SeriesLength);
+            int ceil = (int)(lastPoint.X + playGround.SeriesLength + 1);
+            ISet<Point> winSeries = new HashSet<Point>();
+
+            for (int i = floor; i < ceil; i++)
+            {
+                Point point = new Point(i, lastPoint.Y);
+                if (points.Contains(point))
+                {
+                    winSeries.Add(point);
+                }
+            }
+
+            return winSeries;
         }
 
         private ISet<Point> GetMajorDiag(IList<Point> points)
         {
-            throw new NotImplementedException();
+            ISet<Point> winSeries = new HashSet<Point>();
+
+            for (int i = 0; i < 2 * playGround.SeriesLength + 1; i++)
+            {
+                Point point = new Point(lastPoint.X - playGround.SeriesLength + i, 
+                    lastPoint.Y - playGround.SeriesLength + i);
+                if (points.Contains(point))
+                {
+                    winSeries.Add(point);
+                }
+            }
+
+            return winSeries;
         }
 
         private ISet<Point> GetMinorDiag(IList<Point> points)
         {
-            throw new NotImplementedException();
+            ISet<Point> winSeries = new HashSet<Point>();
+
+            for (int i = 0; i < 2 * playGround.SeriesLength + 1; i++)
+            {
+                Point point = new Point(lastPoint.X + playGround.SeriesLength - i,
+                    lastPoint.Y - playGround.SeriesLength + i);
+                if (points.Contains(point))
+                {
+                    winSeries.Add(point);
+                }
+            }
+
+            return winSeries;
         }
 
         private IList<Point> GetPlayerPoints()

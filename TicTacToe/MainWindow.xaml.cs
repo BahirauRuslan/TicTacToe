@@ -157,6 +157,8 @@ namespace TicTacToe
             foreach (Button button in buttonsPoints.Values)
             {
                 button.Content = "";
+                button.Foreground = new SolidColorBrush(new Color()
+                { A = 0xFF, R = 0x4E, G = 0x5D, B = 0xBD });
             }
         }
 
