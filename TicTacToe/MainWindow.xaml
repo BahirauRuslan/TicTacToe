@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Tic-tac-toe" Height="406" Width="492">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button11" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button11_Click" FontFamily="Showcard Gothic" FontSize="72" Foreground="#FF4E5DBD"/>
+        <Button x:Name="button12" Content="" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button12_Click" FontFamily="Showcard Gothic" FontSize="72" Foreground="#FF4E5DBD"/>
+        <Button x:Name="button13" Content="" HorizontalAlignment="Left" Margin="250,10,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button13_Click" Foreground="#FF4E5DBD" FontFamily="Showcard Gothic" FontSize="72"/>
+        <Button x:Name="button21" Content="" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button21_Click" FontFamily="Showcard Gothic" FontSize="72" Foreground="#FF4E5DBD"/>
+        <Button x:Name="button22" Content="" HorizontalAlignment="Left" Margin="130,130,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button22_Click" Foreground="#FF4E5DBD" FontFamily="Showcard Gothic" FontSize="72"/>
+        <Button x:Name="button23" Content="" HorizontalAlignment="Left" Margin="250,130,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button23_Click" FontFamily="Showcard Gothic" FontSize="72" Foreground="#FF4E5DBD"/>
+        <Button x:Name="button31" Content="" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button31_Click" Foreground="#FF4E5DBD" FontFamily="Showcard Gothic" FontSize="72"/>
+        <Button x:Name="button32" Content="" HorizontalAlignment="Left" Margin="130,250,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button32_Click" FontFamily="Showcard Gothic" FontSize="72" Foreground="#FF4E5DBD"/>
+        <Button x:Name="button33" Content="" HorizontalAlignment="Left" Margin="250,250,0,0" VerticalAlignment="Top" Width="115" Height="115" IsEnabled="False" Click="Button33_Click" Foreground="#FF4E5DBD" FontFamily="Showcard Gothic" FontSize="72"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="392,10,0,0" VerticalAlignment="Top" Width="75" Height="47" Background="#FF0BF000" FontFamily="Showcard Gothic" FontSize="16" Foreground="White" Click="StartButton_Click"/>
+        <Button x:Name="replayButton" Content="Replay" HorizontalAlignment="Left" Margin="392,78,0,0" VerticalAlignment="Top" Width="75" Height="47" Foreground="#FF3A3232" Background="#FFEDF70B" FontFamily="Showcard Gothic" FontSize="16" IsEnabled="False" Click="ReplayButton_Click"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="392,150,0,0" VerticalAlignment="Top" Width="75" Height="47" FontFamily="Showcard Gothic" FontSize="16" Background="#FFDA1515" Foreground="#FFE0B6B6" IsEnabled="False" Click="StopButton_Click"/>
+
     </Grid>
 </Window>
