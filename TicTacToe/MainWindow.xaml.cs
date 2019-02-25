@@ -20,9 +20,20 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
+        private IDictionary<Point, Button> buttonsPoints = new Dictionary<Point, Button>();
+
         public MainWindow()
         {
             InitializeComponent();
+            buttonsPoints.Add(new Point(1, 1), button11);
+            buttonsPoints.Add(new Point(1, 2), button12);
+            buttonsPoints.Add(new Point(1, 3), button13);
+            buttonsPoints.Add(new Point(2, 1), button21);
+            buttonsPoints.Add(new Point(2, 2), button22);
+            buttonsPoints.Add(new Point(2, 3), button23);
+            buttonsPoints.Add(new Point(3, 1), button31);
+            buttonsPoints.Add(new Point(3, 2), button32);
+            buttonsPoints.Add(new Point(3, 3), button33);
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -107,28 +118,18 @@ namespace TicTacToe
 
         private void SetToAllPlayGroundButtonsStatus(bool status)
         {
-            button11.IsEnabled = status;
-            button12.IsEnabled = status;
-            button13.IsEnabled = status;
-            button21.IsEnabled = status;
-            button22.IsEnabled = status;
-            button23.IsEnabled = status;
-            button31.IsEnabled = status;
-            button32.IsEnabled = status;
-            button33.IsEnabled = status;
+            foreach (Button button in buttonsPoints.Values)
+            {
+                button.IsEnabled = status;
+            }
         }
 
         private void ClearAllPlayGroundButtons()
         {
-            button11.Content = "";
-            button12.Content = "";
-            button13.Content = "";
-            button21.Content = "";
-            button22.Content = "";
-            button23.Content = "";
-            button31.Content = "";
-            button32.Content = "";
-            button33.Content = "";
+            foreach (Button button in buttonsPoints.Values)
+            {
+                button.Content = "";
+            }
         }
     }
 }
